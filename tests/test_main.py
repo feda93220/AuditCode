@@ -11,6 +11,8 @@ class TestMain(unittest.TestCase):
         
         # Test avec les valeurs -1 et -2
         self.assertEqual(add(-1, -2), -3)
+        
+        self.assertNotEqual(add(2, 50), 30)
 
 if __name__== '__main__':
     unittest.main()
