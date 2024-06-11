@@ -23,11 +23,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-        # TODO1
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install .
 
     - name: Run tests
       run: |
-        # TODO2
+        coverage run -m unittest discover -s tests
 
     - name: Generate coverage report
       run: |
